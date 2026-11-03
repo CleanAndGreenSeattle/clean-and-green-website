@@ -331,3 +331,11 @@ h1,h2,h3,p{margin:0}
   .drive{animation:none !important;left:45%}
   .carousel-track,.btn,.card{transition:none !important}
 }
+
+/* ---------- Areas we serve ---------- */
+.areas{background:var(--cream);padding:72px 28px 80px;border-top:3px solid var(--forest)}
+.areas-lede{max-width:620px;margin:16px auto 0;font-size:18px;line-height:1.6;color:var(--ink)}
+.areas-list{list-style:none;margin:32px auto 0;padding:0;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:820px}
+.areas-list li{background:#fff;border:2px solid var(--forest);border-radius:999px;padding:10px 20px;font-weight:700;box-shadow:3px 3px 0 var(--peach)}
+.areas-hours{margin:32px auto 0;max-width:620px;font-size:16px;line-height:1.6;color:var(--muted)}
+.areas-hours a{text-decoration:underline;text-underline-offset:3px}
