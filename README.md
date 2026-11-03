@@ -1,28 +1,32 @@
-# Clean & Green website — V3 preview
+# Clean & Green website: developer handoff
 
-Open `index.html` to preview. The new `meet-your-technician.html` uses the supplied family photos.
+Plain HTML, CSS and JavaScript. No build step, no frameworks. Upload the folder contents to any static host.
 
-## Before launch
-- Jobber direct booking URL is linked from navigation, hero, and pricing; verify the Jobber form and whether it creates a confirmed booking or a request.
-- In Jobber, configure a custom post-submission confirmation redirect to the published `https://cleanandgreenseattle.com/meet-your-technician.html` **only if your form supports that setting**. Test a real submission. Do not assume an embedded form can redirect.
-- The pricing estimate is **not** automatically transferred to Jobber. Customer may have to reselect services.
-- Verify service pricing, business details, responsive display, and legal/privacy requirements before publishing.
-- The original Google Reviews Elfsight embed remains in index.html.
-- The site intentionally retains no booking confirmation claim on the welcome page, since request-vs-confirmed status needs verifying.
+## Files
+- `index.html` Home (light retro style, animated truck, services carousel, Elfsight reviews)
+- `pricing.html` Pricing and estimate calculator (dark style)
+- `meet-your-technician.html` Our Story (dark style)
+- `css/styles.css` one shared stylesheet (`body.theme-home` vs `body.theme-dark`)
+- `js/main.js` carousel, decorative trees, footer year
+- `js/pricing.js` calculator. **All prices are in the CATALOG block at the top.**
+- `assets/` photos
 
-## V4 homepage redesign
-- Only `index.html`, new `home-v4.css`, and the new truck photo changed; pricing and technician pages are preserved.
-- Homepage has no individual service buttons.
-- The three linked Jobber actions are header, hero, and final CTA; confirm request-vs-booking semantics before launch.
-- Verify the post-submission redirect in Jobber separately.
+Fonts load from Google Fonts (Anton, Russo One, Kaushan Script, DM Sans).
 
+## Business rules built in
+- Taxes and fees are included in all pricing.
+- $200 carpet minimum (adds a "minimum adjustment" line).
+- Air duct: Small up to 1,500 sq ft $449, Medium 1,501-2,500 $549, Large 2,501-3,500 $699, over 3,500 custom in-home quote.
+- Dryer vent: $179 alone, $129 with air duct cleaning.
+- Only ONE bundle applies at a time, whichever saves more: 15% off carpet + duct, or $50 off dryer vent.
 
-Version 4.2: Only pricing.html, pricing.css and pricing.js changed. Homepage files remain byte-for-byte identical to v4.1. Carpet $200 minimum is now included in priced total; unpriced duct/dryer remain quote-only; copy and reset controls improved.
+## Please confirm before launch
+1. (Confirmed by owner) Phone number `425.280.0022` (appears in header, CTA and footers; `tel:4252800022`). It was read from the truck decal.
+2. Jobber booking link is correct (search for `clienthub.getjobber.com`).
+3. (Confirmed by owner) The 15% bundle is calculated on carpet (including the $200 minimum if it applies) plus the duct price. Adjust in `pricing.js` if it should apply differently.
+4. Elfsight Google Reviews snippet is in `index.html` (`#reviews`). It only renders on the live domain.
+5. Add real meta/OG images and favicon as desired.
 
-Version 4.4: Pricing estimate handoff instructions now specify copying the estimate and pasting it into the Service Details field of the Jobber request form. Homepage unchanged.
-
-Version 4.5: Rebuilt Meet Your Technician as a family-first Our Story page, preserving homepage and pricing files unchanged.
-
-Version 4.7: Meet Your Technician hero family photo embedded directly in meet-your-technician.html to prevent missing-image issues on GitHub Pages. Other pages unchanged.
-
-Version 4.8: forced text presentation for decorative starbursts, arrows and menu icon on mobile. Homepage layout and pricing unchanged.
+## Notes
+- Animations respect `prefers-reduced-motion`; the carousel starts paused for those users.
+- The truck scene and clouds are decorative (`aria-hidden`).
