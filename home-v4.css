@@ -7,3 +7,6 @@
 .home-v4 .v4-ticker .v4-ticker-set{display:block;flex:none;white-space:nowrap}
 @keyframes v4-ribbon-loop{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.home-v4 .v4-ticker .v4-ticker-track{animation:none}}
+
+/* Version 4.8: preserve typographic symbols on mobile; never use emoji fonts. */
+.menu-toggle,.v4-ticker b,.v4-star,.v4-hero-photo figcaption span,.v4-primary span,.v4-inline-link span,.family-hero-text .eyebrow,.footer-bottom span { font-variant-emoji: text; }

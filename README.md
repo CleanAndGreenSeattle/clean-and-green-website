@@ -24,3 +24,5 @@ Version 4.4: Pricing estimate handoff instructions now specify copying the estim
 Version 4.5: Rebuilt Meet Your Technician as a family-first Our Story page, preserving homepage and pricing files unchanged.
 
 Version 4.7: Meet Your Technician hero family photo embedded directly in meet-your-technician.html to prevent missing-image issues on GitHub Pages. Other pages unchanged.
+
+Version 4.8: forced text presentation for decorative starbursts, arrows and menu icon on mobile. Homepage layout and pricing unchanged.
