@@ -15,3 +15,8 @@ Open `index.html` to preview. The new `meet-your-technician.html` uses the suppl
 - Homepage has no individual service buttons.
 - The three linked Jobber actions are header, hero, and final CTA; confirm request-vs-booking semantics before launch.
 - Verify the post-submission redirect in Jobber separately.
+
+
+Version 4.2: Only pricing.html, pricing.css and pricing.js changed. Homepage files remain byte-for-byte identical to v4.1. Carpet $200 minimum is now included in priced total; unpriced duct/dryer remain quote-only; copy and reset controls improved.
+
+Version 4.4: Pricing estimate handoff instructions now specify copying the estimate and pasting it into the Service Details field of the Jobber request form. Homepage unchanged.
