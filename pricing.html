@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Build a Clean & Green estimate for carpet, upholstery, area rug, air duct and dryer vent cleaning. Taxes and fees are included.">
+<title>Pricing & Estimate Calculator | Clean & Green</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Kaushan+Script&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-dark">
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="announce">FRESH SPACES ★ GOOD FEELING ★ CLEAN &amp; GREEN</div>
+
+<div class="header-bar">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Clean and Green home">
+      <span class="brand-text">
+        <span class="brand-name">CLEAN &amp; GREEN</span>
+        <span class="brand-sub">Luxury Home Services</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="pricing.html" aria-current="page">Pricing</a>
+      <a href="meet-your-technician.html">Our Story</a>
+      <a class="btn btn-peach-light" href="https://clienthub.getjobber.com/hubs/13ff48fd-410c-46f8-a10c-d7cc06eb8e5e/public/requests/5079977/new">Book now ↗</a>
+    </nav>
+  </header>
+</div>
+
+<main id="main">
+  <section class="hero-dark">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--peach)">GOOD CLEAN. CLEAR PRICING.</p>
+      <h1 style="margin-top:14px">Your home.</h1>
+      <div class="script">your estimate.</div>
+      <p class="lede">Choose your services. See the priced portion of your estimate as you go.</p>
+    </div>
+  </section>
+
+  <div class="checker" aria-hidden="true"></div>
+
+  <section class="calc-wrap">
+    <div class="wrap">
+      <div class="calc-intro" style="max-width:680px">
+        <p class="eyebrow" style="color:var(--rust)">BUILD YOUR ESTIMATE</p>
+        <h2 class="display">What can we<br><span class="script">clean for you?</span></h2>
+        <p>Add the areas you want cleaned. Your estimate updates instantly.</p>
+      </div>
+
+      <div class="calc-layout">
+        <div class="calc-main">
+
+          <div class="calc-card">
+            <div class="calc-head"><span>01</span><div><h3>Carpet cleaning</h3><p>Choose the areas and optional treatments you'd like.</p></div></div>
+            <div id="carpet-rows"></div>
+          </div>
+
+          <div class="calc-card">
+            <div class="calc-head"><span>02</span><div><h3>Upholstery</h3><p>Freshen up your favorite places to sit.</p></div></div>
+            <div id="uph-rows"></div>
+          </div>
+
+          <div class="calc-card">
+            <div class="calc-head"><span>03</span><div><h3>Area rugs</h3><p>Enter the total square footage for each rug type.</p></div></div>
+            <div id="rug-rows"></div>
+          </div>
+
+          <div class="calc-card">
+            <div class="calc-head"><span>04</span><div><h3>Air duct cleaning</h3><p>Select the package that fits your home size.</p></div></div>
+            <fieldset class="duct-options" id="duct-options">
+              <legend>Home size</legend>
+            </fieldset>
+          </div>
+
+          <div class="calc-card">
+            <div class="calc-head"><span>05</span><div><h3>Dryer vent cleaning</h3><p>Add dryer vent cleaning for $179, or $129 with air duct cleaning. Bundles can't be combined.</p></div></div>
+            <label class="dryer-option">
+              <input type="checkbox" id="dryer-toggle">
+              Include dryer vent cleaning <span>$179 standalone · $129 with air ducts</span>
+            </label>
+          </div>
+        </div>
+
+        <aside class="estimate" aria-label="Your estimate">
+          <p class="eyebrow">YOUR SELECTIONS</p>
+          <h3>Your estimate.</h3>
+          <div id="estimate-lines" aria-live="polite"></div>
+          <div class="estimate-total"><span>Estimated priced total</span><strong id="estimate-total">$0.00</strong></div>
+          <p class="quote-status" id="estimate-status"></p>
+          <p class="fineprint">$200 minimum applies to carpet cleaning orders and is reflected above when needed. Taxes and fees are included. Only one bundle applies at a time (the bigger savings); final pricing is confirmed before service.</p>
+          <a class="btn btn-peach-light cta-link" href="https://clienthub.getjobber.com/hubs/13ff48fd-410c-46f8-a10c-d7cc06eb8e5e/public/requests/5079977/new">Continue to booking ↗</a>
+          <div class="booking-steps">
+            <p class="booking-steps-title">BRING YOUR ESTIMATE TO BOOKING</p>
+            <p><strong>1.</strong> Click <strong>Copy my estimate</strong> below.</p>
+            <p><strong>2.</strong> Open the booking form using <strong>Continue to booking</strong>.</p>
+            <p><strong>3.</strong> Paste your copied estimate into the <strong>Service Details</strong> section of the form.</p>
+            <p class="note">Your selections won't transfer automatically. The final price will be confirmed before service.</p>
+          </div>
+          <button type="button" class="copy-estimate" id="copy-estimate">COPY MY ESTIMATE</button>
+          <button type="button" class="reset-estimate" id="reset-estimate">Clear selections</button>
+          <p class="copy-status" id="copy-status" role="status"></p>
+          <textarea class="copy-fallback" id="copy-fallback" readonly hidden aria-label="Select and copy your estimate"></textarea>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div class="scallop-sage" aria-hidden="true"><i></i></div>
+
+  <section class="faq">
+    <div class="wrap">
+      <p class="eyebrow">A FEW GOOD THINGS TO KNOW</p>
+      <h2 class="display">Easy from<br><span class="script">start to finish.</span></h2>
+      <div class="faq-grid">
+        <div class="faq-card"><h3>Is this a final quote?</h3><p>No. Your estimate is a planning tool. Final pricing depends on your specific needs and is confirmed before service.</p></div>
+        <div class="faq-card"><h3>What should I do before you arrive?</h3><p>Vacuum carpets if possible, and remove toys, small furniture and personal items. We clean around larger furniture.</p></div>
+        <div class="faq-card"><h3>Can I add services later?</h3><p>Absolutely. Ask about pet treatments, stain protection, deodorizing and other additions during your appointment.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-name">CLEAN &amp; GREEN</div>
+      <div class="footer-sub">Luxury Home Services</div>
+      <p>Thoughtful home cleaning for the greater Seattle area.</p>
+      <a class="link" href="meet-your-technician.html">Meet the family behind Clean &amp; Green</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-label">TEXT OR CALL</div>
+      <a class="tel" href="tel:4252800022">425.280.0022</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year">2026</span> Clean &amp; Green Home Services</span><span>MADE FOR FRESH STARTS ★</span></div>
+</footer>
+
+<script src="main.js"></script>
+<script src="pricing.js"></script>
+</body>
+</html>
