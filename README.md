@@ -1,27 +1,17 @@
-# Clean & Green Luxury Home Services — Website
+# Clean & Green website — V3 preview
 
-A static HTML/CSS/JS website. Deploy from the repository root on Netlify (no build command, publish directory `.`).
+Open `index.html` to preview. The new `meet-your-technician.html` uses the supplied family photos.
 
 ## Before launch
-- Replace the temporary booking placeholder in `index.html` with the verified Jobber booking URL or embed.
-- Confirm all pricing, services, legal business name, and service areas.
-- Add real service photos, testimonials (with permission), and appropriate SEO page content.
-- Verify accessibility and responsive layouts on real devices.
-- Keep the current GoDaddy site live until the new website is approved and domain migration is planned.
+- Jobber direct booking URL is linked from navigation, hero, and pricing; verify the Jobber form and whether it creates a confirmed booking or a request.
+- In Jobber, configure a custom post-submission confirmation redirect to the published `https://cleanandgreenseattle.com/meet-your-technician.html` **only if your form supports that setting**. Test a real submission. Do not assume an embedded form can redirect.
+- The pricing estimate is **not** automatically transferred to Jobber. Customer may have to reselect services.
+- Verify service pricing, business details, responsive display, and legal/privacy requirements before publishing.
+- The original Google Reviews Elfsight embed remains in index.html.
+- The site intentionally retains no booking confirmation claim on the welcome page, since request-vs-confirmed status needs verifying.
 
-## Change discipline
-- Work from the latest GitHub repository version, never from remembered code.
-- Keep changes scoped to the requested component/page.
-- Review diffs and use a preview deployment before merging to the main branch.
-- Maintain shared styles and navigation consistency.
-
-## Brand asset
-`assets/clean-green-logo.jpg` is the supplied reference logo. The header currently uses styled text for responsive legibility; the source image is retained for future placement. 
-
-
-## Version 2: Dedicated pricing calculator
-- `pricing.html`, `pricing.css`, and `pricing.js` are new.
-- The homepage retains its existing design and Google Reviews widget. The pricing preview links to the calculator.
-- Duct and dryer vent pricing intentionally require confirmation; never replace with assumed prices.
-- The booking button points to the existing homepage placeholder until the Jobber URL is supplied.
-- The calculator subtotal excludes duct/dryer quote-only items and discounts; verify all prices and business rules before connecting the domain.
+## V4 homepage redesign
+- Only `index.html`, new `home-v4.css`, and the new truck photo changed; pricing and technician pages are preserved.
+- Homepage has no individual service buttons.
+- The three linked Jobber actions are header, hero, and final CTA; confirm request-vs-booking semantics before launch.
+- Verify the post-submission redirect in Jobber separately.
