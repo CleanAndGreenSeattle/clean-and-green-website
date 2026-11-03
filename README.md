@@ -22,3 +22,5 @@ Version 4.2: Only pricing.html, pricing.css and pricing.js changed. Homepage fil
 Version 4.4: Pricing estimate handoff instructions now specify copying the estimate and pasting it into the Service Details field of the Jobber request form. Homepage unchanged.
 
 Version 4.5: Rebuilt Meet Your Technician as a family-first Our Story page, preserving homepage and pricing files unchanged.
+
+Version 4.7: Meet Your Technician hero family photo embedded directly in meet-your-technician.html to prevent missing-image issues on GitHub Pages. Other pages unchanged.
