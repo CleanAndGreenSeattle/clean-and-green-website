@@ -64,7 +64,7 @@
 
   function rugRow(r) {
     var row = document.createElement('div');
-    row.className = 'item-row';
+    row.className = 'item-row rug-row';
     row.innerHTML =
       '<div><span class="item-name"></span><span class="item-price"></span></div>' +
       '<div class="stepper">' +
@@ -209,6 +209,7 @@
       host.appendChild(div);
     });
     $('estimate-total').textContent = money(total);
+    $('mobile-total').textContent = money(total);
     $('estimate-status').textContent = statusText;
 
     lastCopyText = 'Clean & Green preliminary estimate\n' + summary.join('\n') +
